@@ -1,0 +1,10 @@
+.navbar {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background-color: blueviolet;
+}
+
+.navText {
+  margin-right: 20px;
+}
