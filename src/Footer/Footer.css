@@ -1,0 +1,6 @@
+.footer {
+  display: flex;
+  background-color: coral;
+  height: 300px;
+  width: 100%;
+}
