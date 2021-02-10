@@ -1,18 +1,11 @@
 import React from "react";
 
-const Projects = () => {
-
-    const projectsArray = [
-        "project1",
-        "project2",
-        "project3"
-    ]
-
+const Projects = (props) => {
     return (
     <div>
-        <div>{projectsArray[0]}</div>
-        <div>{projectsArray[1]}</div>
-        <div>{projectsArray[2]}</div>
+        <div>{props.projects[0]}</div>
+        <div>{props.projects[1]}</div>
+        <div>{props.projects[2]}</div>
     </div>
     )
 }

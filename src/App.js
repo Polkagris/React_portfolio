@@ -5,12 +5,13 @@ import Navbar from "./Navbar/Navbar";
 import Projects from "./Projects/Projects";
 
 function App() {
+  const myProjectsArray = ["game", "site", "program"];
   return (
     <div className="App">
-      <Navbar />
-      <Header />
-      <Projects />
-      <Footer />
+      <Navbar color="yellow" />
+      <Header title="Hello World!" />
+      <Projects projects={myProjectsArray} />
+      <Footer color="brown" />
     </div>
   );
 }
