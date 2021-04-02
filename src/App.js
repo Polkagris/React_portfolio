@@ -6,12 +6,25 @@ import Projects from "./Projects/Projects";
 import React, { useState } from "react";
 
 function App() {
-  const myProjectsArray = ["game", "site", "program"];
-
   const myProjects = [
-    { name: "game", id: 1, link: "https://www.google.com" },
-    { name: "site", id: 2, link: "https://www.reddit.com" },
-    { name: "program", id: 3, link: "https://www.reactjs.org" },
+    {
+      name: "My awesome game",
+      id: 1,
+      link: "https://www.google.com",
+      description: "An awesome game I made",
+    },
+    {
+      name: "My awesome site",
+      id: 2,
+      link: "https://www.reddit.com",
+      description: "An awesome site I coded",
+    },
+    {
+      name: "My awesome program",
+      id: 3,
+      link: "https://www.reactjs.org",
+      description: "An awesome program I wrote",
+    },
   ];
 
   const [showProjects, setShowProjects] = useState(false);
