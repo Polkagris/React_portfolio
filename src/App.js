@@ -5,6 +5,8 @@ import Navbar from "./Navbar/Navbar";
 import Projects from "./Projects/Projects";
 import React, { useState } from "react";
 
+export const ProjectContext = React.createContext();
+
 function App() {
   const myProjects = [
     {
@@ -34,22 +36,26 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <Navbar color="yellow" />
-      <Header title="Hello World!" />
+    <>
+      <ProjectContext.Provider value={myProjects}>
+        <div className="App">
+          <Navbar color="yellow" />
+          <Header title="Hello World!" />
 
-      {/*       <button onClick={handleShowProjectsButton}>Show projects</button>
-      {showProjects === true && <Projects projects={myProjectsArray} />}
- */}
-      <button onClick={handleShowProjectsButton}>Show Projects</button>
-      {showProjects === true ? (
-        <Projects projects={myProjects} />
-      ) : (
-        <p>Nothing to see here!</p>
-      )}
+          {/*       <button onClick={handleShowProjectsButton}>Show projects</button>
+        {showProjects === true && <Projects projects={myProjectsArray} />}
+  */}
+          <button onClick={handleShowProjectsButton}>Show Projects</button>
+          {showProjects === true ? (
+            <Projects projects={myProjects} />
+          ) : (
+            <p>Nothing to see here!</p>
+          )}
 
-      <Footer color="brown" />
-    </div>
+          <Footer color="brown" />
+        </div>
+      </ProjectContext.Provider>
+    </>
   );
 }
 
