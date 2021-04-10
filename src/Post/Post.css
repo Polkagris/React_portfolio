@@ -1,0 +1,9 @@
+.fetchedDataWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fetchedDataContainer {
+  max-width: 400px;
+}
